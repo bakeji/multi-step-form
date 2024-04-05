@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {  Route, Routes, BrowserRouter } from 'react-router-dom'
+import {  Route, Routes, BrowserRouter } from 'react-router-dom';
 import PersonalInfo from "./pages/personalInfo";
 import PlanPage from "./pages/planPage";
 import AddOns from "./pages/add-ons";
