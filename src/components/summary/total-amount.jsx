@@ -26,7 +26,6 @@ export default function TotalAmount(){
     }
     useEffect(()=>{
         calculateTotal()
-        console.log(selectedPlan)
     }, [])
             
     return(

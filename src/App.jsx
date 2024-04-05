@@ -39,8 +39,6 @@ export default function App(){
     }
 
     useEffect(()=>{
-        console.log(formData.isOnlineService)
-        console.log(formData.plans)
     },[formData])
 
 

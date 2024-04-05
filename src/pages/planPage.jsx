@@ -15,6 +15,8 @@ export default function PlanPage(){
     if(formData.plans!==""){
         setNextPage(true)
         navigate("/add-ons")
+    }else{
+        alert("Please select a plan")
     }
 }
     

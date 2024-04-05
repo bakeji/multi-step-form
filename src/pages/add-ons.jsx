@@ -15,6 +15,9 @@ export default function AddOns(){
         setNextPage(true)
         navigate("/summary")
     }
+    else{
+        alert("Please select an add-on")
+    }
 }
 
     return(
