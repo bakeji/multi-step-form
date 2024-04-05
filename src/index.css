@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color:hsl(206, 94%, 87%) ;
+}
+.nn2{
+  display: none;
+}
+.app{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.flex{
+    display: flex;
+    padding: 10px;
+    border-radius: 18px;
+    width: 100%;
+    align-items: center;
+    height: 85%;
+    gap: 50px;
+    background-color: hsl(0, 0%, 100%) ;
+} 
+
+.sidenav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    height: 96%;
+    gap: 20px;
+    margin-left: 5px;
+    background-size: cover;
+    width: 230px;
+}
+.step1{
+    margin-top: 50px;
+}
+.steps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 10px;
+    
+}
+.steps button{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px #ffffff solid;
+    background-color: transparent;
+  }
+  .active button{
+    background-color:hsl(228, 100%, 84%) ;
+  }
+  .steps span{
+    width: 120px;
+  }
+  .steps p:first-child{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: ubuntu;
+    color:hsl(231, 11%, 63%) ;
+  }
+  .steps p{
+    color: hsl(229, 24%, 87%) ;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: ubuntu;
+
+  }
+  
+  .personal, .plan-page, .add-ons, .finish{
+    display: flex;    
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    padding: 30px;
+    gap: 20px;
+  }
+  .info-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .info-title h2{
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 36px;
+    font-family: Ubuntu;
+  }
+  .info-title p{
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+    font-size: 16px;
+    font-family: Ubuntu;
+  }
+  form{
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    flex-direction: column;
+  }
+  .name, .email, .phone{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .info-form input{
+    color: hsl(213, 96%, 18%);
+    font-size: 16px;
+    font-family: Ubuntu;
+    font-weight: 500;
+    width: 90%;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px hsl(231, 11%, 63%) solid;
+  }
+  .input-error input{
+    border: 1px red solid;
+  }
+  .info-form input:focus{
+    outline: hsl(243, 100%, 62%) solid;
+    border: none;
+  }
+  label{
+    color: hsl(213, 96%, 18%);
+    font-size: 16px;
+    width: 120px;
+    font-family: Ubuntu;
+    font-weight: 500;
+  }
+  .errorMessage{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: ubuntu;
+    color: red;
+    text-align: end;
+  }
+  .label{
+    display: flex;
+    gap: 30%
+  }
+  .nav-btn{
+    display: flex;
+    gap: 45%;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .nav-pg1{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 90%;
+  }
+  .nav-btn button, .nav-pg1 button{
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px;
+    border: none;
+    color:hsl(229, 24%, 87%);
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 8px;
+    height: 50px;
+    font-family: Ubuntu;
+    font-weight: 500;
+  }
+  .nav-btn button:first-child{
+    color: hsl(231, 11%, 63%); 
+    background: transparent;
+  }
+  .nav-btn button:first-child:hover{
+    color: hsl(213, 96%, 18%)
+  }
+  .nav-btn .confirm:hover{
+    background:hsl(228, 100%, 84%);
+  }
+  .nav-btn .confirm{
+    background:hsl(243, 100%, 62%) ;
+  }
+  .plans{
+    display: flex;
+    gap: 15px;
+    width: 80%;
+    margin-top: 20px;
+  }
+ 
+   .plan-selection{
+    display: flex;
+    align-items: start;
+    border: 1px hsl(231, 11%, 63%) solid;
+    gap: 4px;
+    position: relative;
+    flex-direction: column;
+    height: 150px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 110px;
+   }
+   .plan-selection:hover{
+    outline: 1px hsl(213, 96%, 18%) solid;
+    border: 1px hsl(213, 96%, 18%) solid
+   }
+   .selected{
+    background-color:hsl(231, 100%, 99%);
+    outline: 1px hsl(213, 96%, 18%) solid;
+    border: 1px hsl(213, 96%, 18%) solid;
+
+   }
+
+   .plans label,
+   .plans input {
+     display: block;
+      position: absolute;
+     top: 0;
+     left: 0;
+     cursor: pointer;
+     right: 0;
+     bottom: 0;
+   }
+   .plans input[type="radio"] {
+    opacity: 0;
+    z-index: 100;
+  }
+  .plans label{
+    padding: 10px;
+  }
+   .plan-selection img{
+    margin-bottom: 30px;
+   }
+   .plan-selection h3{
+    font-family: Ubuntu;
+    font-weight: 700;
+    font-size: 18px;
+    color: hsl(213, 96%, 18%);
+
+   }
+   
+   .dur, .free{
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(213, 96%, 18%);
+   }
+   .dur{
+    color: hsl(231, 11%, 63%);
+   }
+   .toggle-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    width: 80%;
+    gap: 20px;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 12px;
+   }
+  .toggle-btn p{
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .monthly{
+    color: hsl(213, 96%, 18%) ;
+  }
+  .yrly{
+    color: hsl(231, 11%, 63%) ;
+  }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:  hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .toggle input:checked + .slider {
+    background-color:  hsl(213, 96%, 18%);
+  }
+  
+  .toggle input:focus + .slider {
+    box-shadow: 0 0 1px  hsl(213, 96%, 18%);
+  }
+  
+ .toggle input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .addons-prices{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    width: 80%;
+    flex-direction: column;
+  }
+  .checkbox{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    width: 90%;
+    border-radius: 8px;
+    height: 50px;
+    border: 1px hsl(231, 11%, 63%) solid;
+    align-items: center;
+  }
+  .chng-border{
+    border: 2px  hsl(243, 100%, 62%) solid;
+  }
+  .addons-prices span{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .addons-prices span p,.addons-prices .price {
+    font-size: 16px;
+    color:hsl(231, 11%, 63%) ;
+    font-family: Ubuntu;
+    width: 230px;
+    font-weight: 500;
+  }
+  .addons-prices span p:first-child{
+    color: hsl(213, 96%, 18%);
+  }
+ .addons-prices .price{
+  text-align: end;
+  color: hsl(243, 100%, 62%)
+ }
+ .total-amount{
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 30px;
+ }
+ .checkbox input{
+  cursor: pointer;
+ }
+ .all-plans{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  background-color: hsl(231, 100%, 99%)
+ }
+ .all-plans div, .total {
+  display: flex;
+  gap: 25%;
+ }
+ 
+ .all-plans div p:first-child, .total p:first-child{
+  width: 220px;
+  font-family: Ubuntu;
+    font-weight: 400;
+    font-size: 16px;
+    color: hsl(231, 11%, 63%);
+ }
+ .plan1 span p:first-child, .all-plans .sp{
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 20px;
+    font-family: ubuntu;
+ }
+ .addons-plan p:last-child{
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: ubuntu;
+ }
+ .total p:last-child{
+  color: hsl(243, 100%, 62%);
+  font-weight:700;
+  font-size: 24px;
+  font-family: ubuntu;
+ }
+ .appre{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: column;
+ }
+ .appre h1{
+  color: hsl(213, 96%, 18%);
+  font-weight:700;
+  font-size: 34px;
+  font-family: ubuntu;
+  
+ } 
+ .appre p{
+  text-align: center;
+  width: 70%;
+  color: hsl(231, 11%, 63%);
+  font-weight:500;
+  font-size: 16px;
+  font-family: ubuntu;
+ }
+ @media screen and (max-width:913px) {
+  .app{
+    width: 90%;
+  }
+  .errorMessage{
+    font-size: 12px;
+  }
+}
+
+  @media screen and (max-width:450px) {
+    .app{
+      width: 100%;
+    }
+    .nn{
+      display: none;
+    }
+    
+  
+    .flex{
+      height: 100%;
+      flex-direction: column;
+      background-color: hsl(206, 94%, 87%);
+      gap: 150px;
+      position: relative;
+      padding: 0;
+      box-sizing: content-box;
+    }
+    .sidenav{
+      width: 100%;
+      align-items: start;
+      justify-content: center;
+      margin-left: 0;
+      height: 30%;
+      gap: 0;
+      background: url("/bg-sidebar-mobile.svg") no-repeat;
+      background-size: cover;
+      flex-direction: row;
+    }
+    .steps p{
+      display: none;
+    }
+    .step1{
+      margin-top: 0;
+    }
+    .steps{
+      margin-left: 0;
+      margin-top: 50px;
+    }
+    .steps span{
+      width: 10px;
+    }
+    .steps button{
+      width: 40px;
+      height: 40px;
+    }
+    .personal, .plan-page, .add-ons,.appre, .finish{
+       position: absolute; 
+      width: 75%;
+      height: max-content;
+      margin-top: 90px;
+      border-radius: 16px;
+      box-shadow: 0px 12px 19px 0px rgba(0, 0, 0, 0.15); 
+      background: #ffffff;
+    }
+    .plans{
+      flex-direction: column;
+      margin-top: 10px ;
+
+    }
+    .plan-selection{
+      height: 30px;
+      width: 100%;
+    }
+    .plans label{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 20px;
+    }
+    .plan-selection img{
+      margin-bottom: 0;
+    }
+    .nn2{
+      display: flex;
+      margin-top: 300px;
+      width: 100%;
+      align-items: center;
+      background: #ffffff;
+    padding: 10px;
+      height: 8%;
+    }
+    .nav-btn{
+      margin-bottom: 20px;
+      gap: 35%;
+    }
+    .addons-prices{
+      width: 100%;
+    }
+    .checkbox{
+      width: 100%;
+      box-sizing: content-box;
+      gap: 2px;
+    }
+    .addons-prices span{
+      gap: 2px;
+    }
+    .addons-prices
+    .addons-prices span p , .addons-prices .price{
+      font-size: 14px;
+      width: 200px;
+    }
+
+    .all-plans div, .total {
+      display: flex;
+      gap: 5%;
+     }
+
+     .all-plans div p:first-child, .total p:first-child{
+      width: 190px;
+
+    }
+    .total p:first-child{
+      margin-left: 8px;
+    }
+    .appre p{
+      margin-bottom: 40px;    
+    }
+    .appre{
+      height: 65%;
+      width: 90%;
+    }
+    
+    
+ }
+
+ 
+  
+  
