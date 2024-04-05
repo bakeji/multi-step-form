@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import FinishTitle from "../components/summary/summaryTitle";
 import SideNav from "../components/side-nav";
 import NavBtn from "../components/navBtn";
-import TotalAmount from "../components/summary/total-amount.JSX";
+import TotalAmount from "../components/summary/total-amount";
 import { useNavigate } from "react-router-dom"
 import { FormContext } from "../context/formcontext";
 export default function Finish(){
